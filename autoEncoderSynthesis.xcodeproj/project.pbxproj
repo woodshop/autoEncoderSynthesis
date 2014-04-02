@@ -26,7 +26,6 @@
 		8993352118ADB88E0037A907 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350818ADB88E0037A907 /* libopencv_core.a */; };
 		8993352218ADB88E0037A907 /* libopencv_features2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350918ADB88E0037A907 /* libopencv_features2d.a */; };
 		8993352318ADB88E0037A907 /* libopencv_flann.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350A18ADB88E0037A907 /* libopencv_flann.a */; };
-		8993352418ADB88E0037A907 /* libopencv_gpu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350B18ADB88E0037A907 /* libopencv_gpu.a */; };
 		8993352518ADB88E0037A907 /* libopencv_highgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350C18ADB88E0037A907 /* libopencv_highgui.a */; };
 		8993352618ADB88E0037A907 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350D18ADB88E0037A907 /* libopencv_imgproc.a */; };
 		8993352718ADB88E0037A907 /* libopencv_legacy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8993350E18ADB88E0037A907 /* libopencv_legacy.a */; };
@@ -436,7 +435,6 @@
 				8993353118ADB88F0037A907 /* libopencv_videostab.a in Frameworks */,
 				8993352F18ADB88F0037A907 /* libopencv_ts.a in Frameworks */,
 				E45BE97F0E8CC7DD009D7055 /* CoreAudio.framework in Frameworks */,
-				8993352418ADB88E0037A907 /* libopencv_gpu.a in Frameworks */,
 				E45BE9800E8CC7DD009D7055 /* CoreFoundation.framework in Frameworks */,
 				8993352718ADB88E0037A907 /* libopencv_legacy.a in Frameworks */,
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
