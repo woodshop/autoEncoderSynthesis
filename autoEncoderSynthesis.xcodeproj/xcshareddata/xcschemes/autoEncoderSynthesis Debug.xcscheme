@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -62,7 +62,7 @@
    </LaunchAction>
    <ProfileAction
       shouldUseLaunchSchemeArgsEnv = "YES"
-      savedToolIdentifier = ""
+      savedToolIdentifier = "/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/templates/Leaks.tracetemplate"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
       debugDocumentVersioning = "YES">
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "audioVisualMotion.app"
+            BuildableName = "autoEncoderSynthesis.app"
             BlueprintName = "audioVisualMotion"
-            ReferencedContainer = "container:audioVisualMotion.xcodeproj">
+            ReferencedContainer = "container:autoEncoderSynthesis.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

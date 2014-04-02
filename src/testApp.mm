@@ -60,7 +60,8 @@ void testApp::setup(){
     waveform.setLoopRegion(true);
 
     // load up an audiofile
-    string input_file(ofToDataPath("target.wav"));
+    //string input_file(ofToDataPath("target.wav"));
+    string input_file(ofToDataPath("SOAAGCW1373E974CCE.wav"));
     if(!waveform.loadFile(input_file))
     {
         printf("[ERROR] File %s not found\n", input_file.c_str());
@@ -89,7 +90,7 @@ void testApp::setup(){
     vb.setTranspose();
     
     // setup ring buffer
-    n_fft_size = 2048;
+    n_fft_size = 4096;
     fft_frame = pkm::Mat(1, n_fft_size, 0.0f);
     overlap_frame = pkm::Mat(1, n_fft_size - n_buffer_size, 0.0f);
     recorder = new pkmCircularRecorder(n_fft_size, n_buffer_size);
@@ -197,14 +198,14 @@ void testApp::audioOut(float *buf, int size, int ch){
     fft_frame.clear();
     
     // into activation layer
-    mags.GEMM(W, activationLayer);
+    mags.colRange(0,1025).GEMM(W, activationLayer);
     activationLayer.add(hb);
     
-//    // sigmoid function
-//    activationLayer.multiply(-1.0f);
-//    activationLayer.exp();
-//    activationLayer.add(1.0);
-//    activationLayer.pow(-1.0);
+    // sigmoid function
+    //activationLayer.multiply(-1.0f);
+    //activationLayer.exp();
+   // activationLayer.add(1.0);
+    //activationLayer.pow(-1.0);
     
     // interactive control
     activationLayer = activationLayer.multiply(weights);
