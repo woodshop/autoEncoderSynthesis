@@ -35,6 +35,7 @@
 #include "pkmAudioWaveform.h"
 #include "pkmCircularRecorder.h"
 #include "ofxUI.h"
+#include "aflibConverter.h"
 
 //--------------------------------------------------------------
 class testApp : public ofBaseApp{
@@ -90,8 +91,14 @@ private:
     ofxUICanvas *gui;
     
     //--------------------------------------------------------------
+    aflibConverter *conv;
+    
+    //--------------------------------------------------------------
     int width, height;
     int n_channels, n_buffer_size, n_sample_rate;
     
     bool b_setup;
+    
+    int c_size = 512;
+    
 };

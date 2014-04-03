@@ -18,6 +18,8 @@
 		640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */; };
 		67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B361208CD4107E479F04E7B /* NetworkingUtils.cpp */; };
 		72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */; };
+		755CF08518ECEAFD0022369B /* aflibConverter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 755CF06418ECE76A0022369B /* aflibConverter.cc */; };
+		755CF08718EDACA50022369B /* aflibDebug.cc in Sources */ = {isa = PBXBuildFile; fileRef = 755CF06C18ECE76A0022369B /* aflibDebug.cc */; };
 		75A70E6E18EC5CFB006C93A4 /* testApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.mm */; };
 		7FAA00505B1EED387D84FC9E /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F507D9EC732DAAF70DD18553 /* ofxCvHaarFinder.cpp */; };
 		879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */; };
@@ -215,6 +217,69 @@
 		709390C062A1FBA5FE8801FE /* stitcher.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stitcher.hpp; path = ../../../addons/ofxOpenCv2461/libs/opencv/include/opencv2/stitching/stitcher.hpp; sourceTree = SOURCE_ROOT; };
 		71E4DFF724F3C0D63A677342 /* highgui_c.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = highgui_c.h; path = ../../../addons/ofxOpenCv2461/libs/opencv/include/opencv2/highgui/highgui_c.h; sourceTree = SOURCE_ROOT; };
 		73E487B146483365042EF508 /* utility.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = utility.hpp; path = ../../../addons/ofxOpenCv2461/libs/opencv/include/opencv2/gpu/device/utility.hpp; sourceTree = SOURCE_ROOT; };
+		755CF04518ECE76A0022369B /* aflib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflib.h; sourceTree = "<group>"; };
+		755CF04618ECE76A0022369B /* aflibAudio.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudio.cc; sourceTree = "<group>"; };
+		755CF04718ECE76A0022369B /* aflibAudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudio.h; sourceTree = "<group>"; };
+		755CF04818ECE76A0022369B /* aflibAudioBWFilter.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioBWFilter.cc; sourceTree = "<group>"; };
+		755CF04918ECE76A0022369B /* aflibAudioBWFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioBWFilter.h; sourceTree = "<group>"; };
+		755CF04A18ECE76A0022369B /* aflibAudioConstantSrc.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioConstantSrc.cc; sourceTree = "<group>"; };
+		755CF04B18ECE76A0022369B /* aflibAudioConstantSrc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioConstantSrc.h; sourceTree = "<group>"; };
+		755CF04C18ECE76A0022369B /* aflibAudioEdit.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioEdit.cc; sourceTree = "<group>"; };
+		755CF04D18ECE76A0022369B /* aflibAudioEdit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioEdit.h; sourceTree = "<group>"; };
+		755CF04E18ECE76A0022369B /* aflibAudioFile.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioFile.cc; sourceTree = "<group>"; };
+		755CF04F18ECE76A0022369B /* aflibAudioFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioFile.h; sourceTree = "<group>"; };
+		755CF05018ECE76A0022369B /* aflibAudioMemoryInput.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioMemoryInput.cc; sourceTree = "<group>"; };
+		755CF05118ECE76A0022369B /* aflibAudioMemoryInput.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioMemoryInput.h; sourceTree = "<group>"; };
+		755CF05218ECE76A0022369B /* aflibAudioMixer.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioMixer.cc; sourceTree = "<group>"; };
+		755CF05318ECE76A0022369B /* aflibAudioMixer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioMixer.h; sourceTree = "<group>"; };
+		755CF05418ECE76A0022369B /* aflibAudioPitch.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioPitch.cc; sourceTree = "<group>"; };
+		755CF05518ECE76A0022369B /* aflibAudioPitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioPitch.h; sourceTree = "<group>"; };
+		755CF05618ECE76A0022369B /* aflibAudioRecorder.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioRecorder.cc; sourceTree = "<group>"; };
+		755CF05718ECE76A0022369B /* aflibAudioRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioRecorder.h; sourceTree = "<group>"; };
+		755CF05818ECE76A0022369B /* aflibAudioSampleRateCvt.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioSampleRateCvt.cc; sourceTree = "<group>"; };
+		755CF05918ECE76A0022369B /* aflibAudioSampleRateCvt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioSampleRateCvt.h; sourceTree = "<group>"; };
+		755CF05A18ECE76A0022369B /* aflibAudioSpectrum.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioSpectrum.cc; sourceTree = "<group>"; };
+		755CF05B18ECE76A0022369B /* aflibAudioSpectrum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioSpectrum.h; sourceTree = "<group>"; };
+		755CF05C18ECE76A0022369B /* aflibAudioStereoToMono.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibAudioStereoToMono.cc; sourceTree = "<group>"; };
+		755CF05D18ECE76A0022369B /* aflibAudioStereoToMono.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibAudioStereoToMono.h; sourceTree = "<group>"; };
+		755CF05E18ECE76A0022369B /* aflibChain.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibChain.cc; sourceTree = "<group>"; };
+		755CF05F18ECE76A0022369B /* aflibChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibChain.h; sourceTree = "<group>"; };
+		755CF06018ECE76A0022369B /* aflibChainNode.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibChainNode.cc; sourceTree = "<group>"; };
+		755CF06118ECE76A0022369B /* aflibChainNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibChainNode.h; sourceTree = "<group>"; };
+		755CF06218ECE76A0022369B /* aflibConfig.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibConfig.cc; sourceTree = "<group>"; };
+		755CF06318ECE76A0022369B /* aflibConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibConfig.h; sourceTree = "<group>"; };
+		755CF06418ECE76A0022369B /* aflibConverter.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibConverter.cc; sourceTree = "<group>"; };
+		755CF06518ECE76A0022369B /* aflibConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibConverter.h; sourceTree = "<group>"; };
+		755CF06618ECE76A0022369B /* aflibConverterLargeFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibConverterLargeFilter.h; sourceTree = "<group>"; };
+		755CF06718ECE76A0022369B /* aflibConverterSmallFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibConverterSmallFilter.h; sourceTree = "<group>"; };
+		755CF06818ECE76A0022369B /* aflibData.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibData.cc; sourceTree = "<group>"; };
+		755CF06918ECE76A0022369B /* aflibData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibData.h; sourceTree = "<group>"; };
+		755CF06A18ECE76A0022369B /* aflibDateTime.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibDateTime.cc; sourceTree = "<group>"; };
+		755CF06B18ECE76A0022369B /* aflibDateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibDateTime.h; sourceTree = "<group>"; };
+		755CF06C18ECE76A0022369B /* aflibDebug.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibDebug.cc; sourceTree = "<group>"; };
+		755CF06D18ECE76A0022369B /* aflibDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibDebug.h; sourceTree = "<group>"; };
+		755CF06E18ECE76A0022369B /* aflibEditClip.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibEditClip.cc; sourceTree = "<group>"; };
+		755CF06F18ECE76A0022369B /* aflibEditClip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibEditClip.h; sourceTree = "<group>"; };
+		755CF07018ECE76A0022369B /* aflibEnvFile.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibEnvFile.cc; sourceTree = "<group>"; };
+		755CF07118ECE76A0022369B /* aflibEnvFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibEnvFile.h; sourceTree = "<group>"; };
+		755CF07218ECE76A0022369B /* aflibFFT.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibFFT.cc; sourceTree = "<group>"; };
+		755CF07318ECE76A0022369B /* aflibFFT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibFFT.h; sourceTree = "<group>"; };
+		755CF07418ECE76A0022369B /* aflibFile.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibFile.cc; sourceTree = "<group>"; };
+		755CF07518ECE76A0022369B /* aflibFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibFile.h; sourceTree = "<group>"; };
+		755CF07618ECE76A0022369B /* aflibFileItem.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibFileItem.cc; sourceTree = "<group>"; };
+		755CF07718ECE76A0022369B /* aflibFileItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibFileItem.h; sourceTree = "<group>"; };
+		755CF07818ECE76A0022369B /* aflibMemCache.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibMemCache.cc; sourceTree = "<group>"; };
+		755CF07918ECE76A0022369B /* aflibMemCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibMemCache.h; sourceTree = "<group>"; };
+		755CF07A18ECE76A0022369B /* aflibMemNode.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibMemNode.cc; sourceTree = "<group>"; };
+		755CF07B18ECE76A0022369B /* aflibMemNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibMemNode.h; sourceTree = "<group>"; };
+		755CF07C18ECE76A0022369B /* aflibMixerItem.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibMixerItem.cc; sourceTree = "<group>"; };
+		755CF07D18ECE76A0022369B /* aflibMixerItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibMixerItem.h; sourceTree = "<group>"; };
+		755CF07E18ECE76A0022369B /* aflibRecorderItem.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibRecorderItem.cc; sourceTree = "<group>"; };
+		755CF07F18ECE76A0022369B /* aflibRecorderItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibRecorderItem.h; sourceTree = "<group>"; };
+		755CF08018ECE76A0022369B /* aflibSampleData.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aflibSampleData.cc; sourceTree = "<group>"; };
+		755CF08118ECE76A0022369B /* aflibSampleData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aflibSampleData.h; sourceTree = "<group>"; };
+		755CF08218ECE76A0022369B /* Makefile.am */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		755CF08318ECE76A0022369B /* Makefile.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
 		7588F6466AFE1FF2B1CADA19 /* dummy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = dummy.h; path = ../../../addons/ofxOpenCv2461/libs/opencv/include/opencv2/flann/dummy.h; sourceTree = SOURCE_ROOT; };
 		75AD800567AD9D8B1774EDC8 /* hdf5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = hdf5.h; path = ../../../addons/ofxOpenCv2461/libs/opencv/include/opencv2/flann/hdf5.h; sourceTree = SOURCE_ROOT; };
 		75FCD87C8C42C40775745C29 /* block.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = block.hpp; path = ../../../addons/ofxOpenCv2461/libs/opencv/include/opencv2/gpu/device/block.hpp; sourceTree = SOURCE_ROOT; };
@@ -678,6 +743,77 @@
 			name = imgproc;
 			sourceTree = "<group>";
 		};
+		755CF04418ECE76A0022369B /* aflib */ = {
+			isa = PBXGroup;
+			children = (
+				755CF04518ECE76A0022369B /* aflib.h */,
+				755CF04618ECE76A0022369B /* aflibAudio.cc */,
+				755CF04718ECE76A0022369B /* aflibAudio.h */,
+				755CF04818ECE76A0022369B /* aflibAudioBWFilter.cc */,
+				755CF04918ECE76A0022369B /* aflibAudioBWFilter.h */,
+				755CF04A18ECE76A0022369B /* aflibAudioConstantSrc.cc */,
+				755CF04B18ECE76A0022369B /* aflibAudioConstantSrc.h */,
+				755CF04C18ECE76A0022369B /* aflibAudioEdit.cc */,
+				755CF04D18ECE76A0022369B /* aflibAudioEdit.h */,
+				755CF04E18ECE76A0022369B /* aflibAudioFile.cc */,
+				755CF04F18ECE76A0022369B /* aflibAudioFile.h */,
+				755CF05018ECE76A0022369B /* aflibAudioMemoryInput.cc */,
+				755CF05118ECE76A0022369B /* aflibAudioMemoryInput.h */,
+				755CF05218ECE76A0022369B /* aflibAudioMixer.cc */,
+				755CF05318ECE76A0022369B /* aflibAudioMixer.h */,
+				755CF05418ECE76A0022369B /* aflibAudioPitch.cc */,
+				755CF05518ECE76A0022369B /* aflibAudioPitch.h */,
+				755CF05618ECE76A0022369B /* aflibAudioRecorder.cc */,
+				755CF05718ECE76A0022369B /* aflibAudioRecorder.h */,
+				755CF05818ECE76A0022369B /* aflibAudioSampleRateCvt.cc */,
+				755CF05918ECE76A0022369B /* aflibAudioSampleRateCvt.h */,
+				755CF05A18ECE76A0022369B /* aflibAudioSpectrum.cc */,
+				755CF05B18ECE76A0022369B /* aflibAudioSpectrum.h */,
+				755CF05C18ECE76A0022369B /* aflibAudioStereoToMono.cc */,
+				755CF05D18ECE76A0022369B /* aflibAudioStereoToMono.h */,
+				755CF05E18ECE76A0022369B /* aflibChain.cc */,
+				755CF05F18ECE76A0022369B /* aflibChain.h */,
+				755CF06018ECE76A0022369B /* aflibChainNode.cc */,
+				755CF06118ECE76A0022369B /* aflibChainNode.h */,
+				755CF06218ECE76A0022369B /* aflibConfig.cc */,
+				755CF06318ECE76A0022369B /* aflibConfig.h */,
+				755CF06418ECE76A0022369B /* aflibConverter.cc */,
+				755CF06518ECE76A0022369B /* aflibConverter.h */,
+				755CF06618ECE76A0022369B /* aflibConverterLargeFilter.h */,
+				755CF06718ECE76A0022369B /* aflibConverterSmallFilter.h */,
+				755CF06818ECE76A0022369B /* aflibData.cc */,
+				755CF06918ECE76A0022369B /* aflibData.h */,
+				755CF06A18ECE76A0022369B /* aflibDateTime.cc */,
+				755CF06B18ECE76A0022369B /* aflibDateTime.h */,
+				755CF06C18ECE76A0022369B /* aflibDebug.cc */,
+				755CF06D18ECE76A0022369B /* aflibDebug.h */,
+				755CF06E18ECE76A0022369B /* aflibEditClip.cc */,
+				755CF06F18ECE76A0022369B /* aflibEditClip.h */,
+				755CF07018ECE76A0022369B /* aflibEnvFile.cc */,
+				755CF07118ECE76A0022369B /* aflibEnvFile.h */,
+				755CF07218ECE76A0022369B /* aflibFFT.cc */,
+				755CF07318ECE76A0022369B /* aflibFFT.h */,
+				755CF07418ECE76A0022369B /* aflibFile.cc */,
+				755CF07518ECE76A0022369B /* aflibFile.h */,
+				755CF07618ECE76A0022369B /* aflibFileItem.cc */,
+				755CF07718ECE76A0022369B /* aflibFileItem.h */,
+				755CF07818ECE76A0022369B /* aflibMemCache.cc */,
+				755CF07918ECE76A0022369B /* aflibMemCache.h */,
+				755CF07A18ECE76A0022369B /* aflibMemNode.cc */,
+				755CF07B18ECE76A0022369B /* aflibMemNode.h */,
+				755CF07C18ECE76A0022369B /* aflibMixerItem.cc */,
+				755CF07D18ECE76A0022369B /* aflibMixerItem.h */,
+				755CF07E18ECE76A0022369B /* aflibRecorderItem.cc */,
+				755CF07F18ECE76A0022369B /* aflibRecorderItem.h */,
+				755CF08018ECE76A0022369B /* aflibSampleData.cc */,
+				755CF08118ECE76A0022369B /* aflibSampleData.h */,
+				755CF08218ECE76A0022369B /* Makefile.am */,
+				755CF08318ECE76A0022369B /* Makefile.in */,
+			);
+			name = aflib;
+			path = ../../../../osalp/aflib;
+			sourceTree = "<group>";
+		};
 		75E168E18266016E1B49021C /* legacy */ = {
 			isa = PBXGroup;
 			children = (
@@ -915,6 +1051,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				755CF04418ECE76A0022369B /* aflib */,
 				89EA42BE18EB2AD100C6652F /* pkmAudio */,
 				8979320318EB24F900245784 /* pkmEXTAudioFile */,
 				8979320918EB24FA00245784 /* pkmFFT */,
@@ -1274,6 +1411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755CF08718EDACA50022369B /* aflibDebug.cc in Sources */,
+				755CF08518ECEAFD0022369B /* aflibConverter.cc in Sources */,
 				89EA42C618EB2C8900C6652F /* pkmMatrix.cpp in Sources */,
 				89EA42C218EB2C6700C6652F /* pkmEXTAudioFileReader.h in Sources */,
 				89EA42C318EB2C6700C6652F /* pkmEXTAudioFileReader.mm in Sources */,

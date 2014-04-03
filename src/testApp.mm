@@ -90,7 +90,7 @@ void testApp::setup(){
     vb.setTranspose();
     
     // setup ring buffer
-    n_fft_size = 4096;
+    n_fft_size = 2048;
     fft_frame = pkm::Mat(1, n_fft_size, 0.0f);
     overlap_frame = pkm::Mat(1, n_fft_size - n_buffer_size, 0.0f);
     recorder = new pkmCircularRecorder(n_fft_size, n_buffer_size);
@@ -100,15 +100,16 @@ void testApp::setup(){
     mags = pkm::Mat(1, n_fft_size/2 + 1);
     phases = pkm::Mat(1, n_fft_size/2 + 1);
     
+    conv = new aflibConverter(false, true, false);
+    
     // setup audio callbacks
     ofSoundStreamSetup(1,               // output channels
                        0,               // input channels
                        n_sample_rate,   // samples per second
-                       n_buffer_size,   // samples per audio call back
+                       n_buffer_size*2,   // samples per audio call back
                        4);              // number of audio callback buffers
     
     initializeGUI();
-    
     b_setup = true;
 }
 
@@ -191,6 +192,8 @@ void testApp::audioOut(float *buf, int size, int ch){
     recorder->insertFrame(buf);
     recorder->copyAlignedData(fft_frame.data);
     output.clear();
+    pkm::Mat output2(1, size*2);
+    output2.clear();
     
     // apply fft
     bool b_apply_window = true;
@@ -198,8 +201,8 @@ void testApp::audioOut(float *buf, int size, int ch){
     fft_frame.clear();
     
     // into activation layer
-    mags.colRange(0,1025).GEMM(W, activationLayer);
-    activationLayer.add(hb);
+    //mags.colRange(0,1025).GEMM(W, activationLayer);
+    //activationLayer.add(hb);
     
     // sigmoid function
     //activationLayer.multiply(-1.0f);
@@ -208,11 +211,11 @@ void testApp::audioOut(float *buf, int size, int ch){
     //activationLayer.pow(-1.0);
     
     // interactive control
-    activationLayer = activationLayer.multiply(weights);
+    //activationLayer = activationLayer.multiply(weights);
     
     // back out
-    activationLayer.GEMM(W_prime, mags);
-    mags.add(vb);
+    //activationLayer.GEMM(W_prime, mags);
+    //mags.add(vb);
     
     // add previous overlap
     fft_frame.colRange(0, n_fft_size - size, false).copy(overlap_frame);
@@ -221,6 +224,24 @@ void testApp::audioOut(float *buf, int size, int ch){
     fft->inverse(0, fft_frame.data, mags.data, phases.data, b_apply_window);
     output.copy(fft_frame.colRange(0, size, false));
     
+    // -----------------------------
+    // Resample
+    short x[512];
+    short y[1024];
+        for (int i=0; i<512; i++) {
+        x[i] = (short) (output.data[i] * 32767);
+    }
+    
+    conv->initialize(2.0f, 1);
+    conv->resample(n_buffer_size, n_buffer_size*2, x, y);
+    
+    for (int i=0; i<1024; i++) {
+        //output2.data[i] = ((float) y[i]) / 32767.0f;
+        buf[i] = ((float) y[i]) / 32767.0f;
+    }
+    //buf = output2.data;
+    // -----------------------------
+
     // store overlap
     overlap_frame.copy(fft_frame.colRange(size, n_fft_size));
 }
